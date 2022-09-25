@@ -1,13 +1,24 @@
-# orenavidan.github.io
+# Big Data Project - Small Files Problem on Object Storage
 
-Spark is a unified analytics engine for large-scale data processing. It provides
-high-level APIs in Scala, Java, Python, and R, and an optimized engine that
-supports general computation graphs for data analysis. It also supports a
-rich set of higher-level tools including Spark SQL for SQL and DataFrames,
-pandas API on Spark for pandas workloads, MLlib for machine learning, GraphX for graph processing,
-and Structured Streaming for stream processing.
+## Project Background and Summary
 
-<https://spark.apache.org/>
+The program goes through 33 CSV files, all stored on the cloud, and each has 100K inspections of 3 fiels - first name, last name, and city. 
+
+The program uses MapReduce to efficiently and effectively create a list that for each combination of field+value, shows the names of the files the combination appears in.
+
+For example, if Haifa and Hamburg are cities in the database, the results would look like the following:
+
+```
+[['city_Haifa' 'myCSV15.csv, myCSV6.csv, myCSV8.csv, myCSV9.csv, myCSV11.csv, myCSV12.csv, myCSV17.csv, myCSV10.csv, myCSV5.csv, myCSV7.csv, myCSV18.csv, myCSV2.csv, myCSV4.csv']
+
+['city_Hamburg' 'myCSV15.csv, myCSV6.csv, myCSV8.csv, myCSV9.csv, myCSV12.csv, myCSV11.csv, myCSV17.csv, myCSV19.csv, myCSV10.csv, myCSV5.csv, myCSV1.csv, myCSV13.csv, myCSV18.csv, myCSV7.csv, myCSV2.csv, myCSV0.csv, myCSV4.csv']
+```
+
+Our work comes to solve the small file problem under Object Storage, and to suggest that if we make an aggregation of small files into larger ones, processing time will be reduced. In the experiment, we will measure the change in processing time - with and without the aggregation step. 
+
+Our results show a 60% improvement in processing time with the aggregation process prior to using MapReduce.
+
+The notebook of the project can be found [here](https://github.com/orenavidan/orenavidan.github.io/blob/main/Big_Data_Final_Project_Small_file_problem_in_Object_Storage_v2.ipynb). 
 
 [![GitHub Actions Build](https://github.com/apache/spark/actions/workflows/build_main.yml/badge.svg)](https://github.com/apache/spark/actions/workflows/build_main.yml)
 [![AppVeyor Build](https://img.shields.io/appveyor/ci/ApacheSoftwareFoundation/spark/master.svg?style=plastic&logo=appveyor)](https://ci.appveyor.com/project/ApacheSoftwareFoundation/spark)
