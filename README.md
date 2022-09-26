@@ -24,6 +24,10 @@ Our results show a 60% improvement in processing time with the aggregation proce
 The notebook of the project can be found [here](https://github.com/orenavidan/orenavidan.github.io/blob/main/Big_Data_Final_Project_Small_file_problem_in_Object_Storage_v2.ipynb). This README file only contains basic explanations about the project.
 
 
+## Setup and configuration
+The setup includes pip installing and importing of the Lithops package, that will enable us to access files stored on IBM Cloud. Part of the configuration would be to provide lithops with the name of the user, the bucket, a public and private keys, and more. 
+
+In addition, we will import SQLite and Pandas that will be used in the Shuffle phase and the time package for measuring the time it took to perform the two experiments. 
 
 
 ## Program flow and main functions
