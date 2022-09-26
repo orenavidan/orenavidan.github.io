@@ -49,20 +49,22 @@ The Map function operates under the MapRduce method, and thus it receives as inp
 
 ```
 
-Note: It is important to know that sometimes we use tuples and sometimes lists, as to some limitation lithops has with working with tuples.
+Note: Sometimes we use tuples and sometimes lists, due to some technical limitations of lithops.
 
-4. **Shuffle phase** - the shuffle phase is actually executed under the MapReduceServerlessEngine class, under the execute function. The shuffle phase includes aggregating all files names for each field+key combination, and listing them together, even with duplications. For example, after the shuffle phase, the data could look like -
+### **Shuffle phase**
+The shuffle phase is actually executed under the MapReduceServerlessEngine class, under the execute function. The shuffle phase includes aggregating all files names for each field+key combination, and listing them together, even with duplications. For example, after the shuffle phase, the data could look like -
 
 ```
 [['city_Haifa', 'myCSV15.csv', 'myCSV6.csv', 'myCSV8.csv', 'myCSV8.csv'], ...]
 ```
 
-5. **Reduce function** - the purpose of the reduce phase is to remove duplicates from the list above. The function receives a list of the shape
+### **Reduce function**
+The purpose of the reduce phase is to remove duplicates documents' names from the list above. The function receives a list (again, one list at a time) of the shape
 ``` [key+value, doc1, doc2, doc2,...]```
-and returns 
+removes duplicates, and returns 
 ```[key+value, doc1, doc2,...]```
 
-So for example we will get - 
+So for our example from before we will get - 
 ```
 [['city_Haifa', 'myCSV15.csv', 'myCSV6.csv', 'myCSV8.csv'], ...]
 ```
