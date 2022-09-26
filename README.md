@@ -21,7 +21,7 @@ Our results show a 60% improvement in processing time with the aggregation proce
 
 ### Online Documentation
 
-The notebook of the project can be found [here](https://github.com/orenavidan/orenavidan.github.io/blob/main/Big_Data_Final_Project_Small_file_problem_in_Object_Storage_v2.ipynb). This README file only contains basic explanations about the project.
+The notebook of the project can be found [here](https://github.com/orenavidan/orenavidan.github.io/blob/main/Big_Data_Final_Project_Small_file_problem_in_Object_Storage_v2.ipynb). 
 
 
 ## Setup and configuration
