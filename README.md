@@ -56,6 +56,11 @@ Note: It is important to know that sometimes we use tuples and sometimes lists, 
 and returns 
 ```[key+value, doc1, doc2,...]```
 
+So for example we will get - 
+```
+[['city_Haifa', 'myCSV15.csv', 'myCSV6.csv', 'myCSV8.csv'], ...]
+```
+and this will be our final result as shown above. 
 
 
 ## Experiment desription and results
