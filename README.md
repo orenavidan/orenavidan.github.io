@@ -51,7 +51,10 @@ Note: It is important to know that sometimes we use tuples and sometimes lists, 
 [['city_Haifa', 'myCSV15.csv', 'myCSV6.csv'], 'myCSV8.csv', 'myCSV8.csv']...]
 ```
 
-5. **Reduce phase** - the purpose of the reduce phase is to remove duplicates from the list above. The function receives a list of the shape [key+value, doc1, doc2, doc2,...] and returns [key+value, doc1, doc2,...].
+5. **Reduce phase** - the purpose of the reduce phase is to remove duplicates from the list above. The function receives a list of the shape
+``` [key+value, doc1, doc2, doc2,...]```
+and returns 
+```[key+value, doc1, doc2,...]```
 
 
 
