@@ -4,7 +4,7 @@
 
 The program goes through 33 CSV files, each has 100K inspections of 3 fiels - first name, last name, and city. The program's goal is to create a list of lists, that each combination of field+value, will recive a list of the files it appeares in. 
 
-The program uses MapReduce method, together with Lithops and IBM Cloud, to efficiently and effectively solve the problem.
+The program uses MapReduce(https://en.wikipedia.org/wiki/MapReduce) method, together with Lithops(https://lithops-cloud.github.io/) and IBM Cloud(https://www.ibm.com/cloud), to efficiently and effectively solve the problem.
 
 For example, if Haifa and Hamburg are two cities appearing in the database, the results would look like the following:
 
