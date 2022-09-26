@@ -2,11 +2,11 @@
 
 ## Project Background and Summary
 
-The program goes through 33 CSV files, all stored on the cloud, and each has 100K inspections of 3 fiels - first name, last name, and city. 
+The program goes through 33 CSV files, each has 100K inspections of 3 fiels - first name, last name, and city. The program's goal is to create a list of lists, that each combination of field+value, will recive a list of the files it appeares in. 
 
-The program uses MapReduce to efficiently and effectively create a list that for each combination of field+value, shows the names of the files the combination appears in.
+The program uses MapReduce method, together with Lithops and IBM Cloud, to efficiently and effectively solve the problem.
 
-For example, if Haifa and Hamburg are cities in the database, the results would look like the following:
+For example, if Haifa and Hamburg are two cities appearing in the database, the results would look like the following:
 
 ```
 [['city_Haifa' 'myCSV15.csv, myCSV6.csv, myCSV8.csv, myCSV9.csv, myCSV11.csv, myCSV12.csv, myCSV17.csv, myCSV10.csv, myCSV5.csv, myCSV7.csv, myCSV18.csv, myCSV2.csv, myCSV4.csv']
@@ -14,7 +14,7 @@ For example, if Haifa and Hamburg are cities in the database, the results would 
 ['city_Hamburg' 'myCSV15.csv, myCSV6.csv, myCSV8.csv, myCSV9.csv, myCSV12.csv, myCSV11.csv, myCSV17.csv, myCSV19.csv, myCSV10.csv, myCSV5.csv, myCSV1.csv, myCSV13.csv, myCSV18.csv, myCSV7.csv, myCSV2.csv, myCSV0.csv, myCSV4.csv']
 ```
 
-Our work comes to solve the small file problem under Object Storage, and to suggest that if we make an aggregation of small files into larger ones, processing time will be reduced. In the experiment, we will measure the change in processing time - with and without the aggregation step. 
+Our experiment comes to suggest a solution to the small file problem under Object Storage. Our suggestions was to aggregate small files into larger ones, prior to executing the MapReduce process, and by that reduce processing time. In the experiment, we will run the program two timws - with and without the aggregation step, and measure the differences in the time it took to perform the task. 
 
 Our results show a 60% improvement in processing time with the aggregation process prior to using MapReduce.
 
