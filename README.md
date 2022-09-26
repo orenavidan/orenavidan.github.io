@@ -58,6 +58,7 @@ and returns
 
 
 
-## Experiment results
-Our expriment shows a 60% reduction in processing time from ~11 seconds to ~4 seconds. 
+## Experiment desription and results
+Our expriment included measuring the time it took the program to process the data, with and without aggregating it first. The program uses `aggregator switch` that is turned on when we detect small files, and changes the way the map function works. 
+The reuslts show a 60% reduction in processing time from ~11 seconds to ~4 seconds. 
 
