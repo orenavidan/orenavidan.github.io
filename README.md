@@ -48,7 +48,7 @@ Note: It is important to know that sometimes we use tuples and sometimes lists, 
 4. **Shuffle phase** - the shuffle phase is actually executed under the MapReduceServerlessEngine class, under the execute function. The shuffle phase includes aggregating all files names for each field+key combination, and listing them together, even with duplications. For example, after the shuffle phase, the data could look like -
 
 ```
-[['city_Haifa', 'myCSV15.csv', 'myCSV6.csv', 'myCSV8.csv'], ...]
+[['city_Haifa', 'myCSV15.csv', 'myCSV6.csv', 'myCSV8.csv', 'myCSV8.csv'], ...]
 ```
 
 5. **Reduce phase** - the purpose of the reduce phase is to remove duplicates from the list above. The function receives a list of the shape
