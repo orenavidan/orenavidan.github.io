@@ -19,9 +19,7 @@ Our experiment comes to suggest a solution to the small file problem under Objec
 Our results show a 60% improvement in processing time with the aggregation process prior to using MapReduce.
 
 
-
-
-## Online Documentation
+### Online Documentation
 
 The notebook of the project can be found [here](https://github.com/orenavidan/orenavidan.github.io/blob/main/Big_Data_Final_Project_Small_file_problem_in_Object_Storage_v2.ipynb). This README file only contains basic explanations about the project.
 
