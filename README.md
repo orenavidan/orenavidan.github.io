@@ -36,7 +36,7 @@ As mentioned, the program uses the MapReduce method, together with Lithops and I
 The flow of the program is as follows:
 1. **Get data from cloud** - firstly, we would want to understand how many files we have on the cloud and what their names are. The function accesses our bucket on the cloud and creates a list of all of the CSV files we have there. This will later be used (under the Map phase) to iterate over all files. 
 2. **Aggregator** - the aggregation function, as its name implies, responsible for aggregating the small files together and keeping the name of the original file inside and together with the data of the file. The function iterates over all CSV files on the cloud, and looks for small files. For each small file, the function will create a new field with the name of the file and then add it to the file's data. After, it will add the updated data to the aggregated file. When reaching a size that is large enough, the funciton will create a new large file and start from the beginning. 
-3. Map function - the function operates under the MapRduce method, and this it receives only one name of one CSV file we have on the cloud, and returns a list of lists of the shape (field_value, document). The document part includes only one document name at a time. For exmaple we can receieve - 
+3. **Map function** - the function operates under the MapRduce method, and this it receives only one name of one CSV file we have on the cloud, and returns a list of lists of the shape (field_value, document). The document part includes only one document name at a time. For exmaple we can receieve - 
 
 ```
 [['city_Haifa', 'myCSV15.csv'], ['city_Haifa', 'myCSV6.csv'], ['city_Haifa', 'myCSV8.csv'], ['city_Haifa', 'myCSV8.csv']...]
